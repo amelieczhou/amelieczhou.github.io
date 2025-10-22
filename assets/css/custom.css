@@ -1,0 +1,4 @@
+/* 可选：大屏字体放大 */
+@media (min-width: 2000px) {
+  body { font-size: 1.3rem; }
+}

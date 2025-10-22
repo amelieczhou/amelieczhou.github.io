@@ -50,6 +50,7 @@
 
 <!-- For all browsers -->
 <link rel="stylesheet" href="assets/css/main.css">
+<link rel="stylesheet" href="assets/css/custom.css">
 
 <meta http-equiv="cleartype" content="on">
 <head>
@@ -127,30 +128,15 @@
   <div class="author__urls-wrapper">
     <!-- <button class="btn btn--inverse">More Info & Contact</button> -->
     <ul class="author__urls social-icons">
-      
-        <li><div style="white-space: normal; margin-bottom: 1em;">Office: DLB 641, Shaw Campus</div></li>
-      
-      
-        <li><i class="fa fa-fw fa-map-marker" aria-hidden="true"></i> Kowloon Tong, Hong Kong, China</li>
-      
-      
-      
-      
-        <li><a href="mailto:amelieczhou@comp.hkbu.edu.hk"><i class="fas fa-fw fa-envelope" aria-hidden="true"></i> Email</a></li>
-      
-        <li><a href="Amelie_Resume_hkbu.pdf"><i class="fas fa-fw fa-envelope" aria-hidden="true"></i> CV</a></li>
-      
+      <li><div style="white-space: normal; margin-bottom: 1em;">Office: DLB 641, Shaw Campus</div></li>
+      <li><div style="white-space: normal; margin-bottom: 1em;">Kowloon Tong, Hong Kong, China</div></li>
+      <li><a href="mailto:amelieczhou@comp.hkbu.edu.hk"><class="fas fa-fw fa-envelope" aria-hidden="true"> Email</a></li>
+      <li><a href="Amelie_Resume_hkbu.pdf"><class="fas fa-fw fa-envelope" aria-hidden="true"> CV</a></li>
+      <li><a href="https://scholar.google.com/citations?user=pR-IEhcAAAAJ&hl=en">Google Scholar</a></li>
     </ul>
       <div class="author__urls_sm">
-      
-      
         <a href="mailto:amelieczhou@comp.hkbu.edu.hk"><i class="fas fa-fw fa-envelope" aria-hidden="true"></i></a>
-
-
-      
-      
         <a href="CV.pdf download"><i class="fa-solid fa-file-lines"></i></a>
-      
     </div>
   </div>
 </div>
@@ -180,8 +166,25 @@
 <p></p>		  
 <p> <strong style="color: red;">I am looking for PhD/Intern/Visiting students with an interest in high-performance computing and distributed data systems. Please contact me with your CV. <a href="https://mp.weixin.qq.com/s/hHWFVfvSmcNFap1Oq097iQ">[More Info]</a></strong></p>
 
-<h1 id="-news">🔥 Recent Highlights</h1>
+<h1 id="-research">💻 Research Interests</h1>
+
+<p>Exploiting the rich parallel and distributed architectures to accelerate Big Data/ML/AI applications is the main theme of my research. More specifically, we have been actively working on the following directions:</p>
 <ul>
+  <li> Cost-efficient application serving in the Cloud, especially using serverless computing platforms <a href="research.html#cloud">[details]</a>
+  <li> Interference-aware I/O scheduling and processing-in-memory optimizations for AI applications <a href="research.html#storage">[details]</a> <a href="https://arxiv.org/pdf/2410.23805">[recent paper]</a>
+  <li> MLsys, High-performance system optimizations for large language models (LLMs)</li>
+
+</ul>
+<!-- <p>Some of our algorithms have been implemented in the following system prototypes: 
+  <p>
+  <ul>
+  <li><a href="https://arxiv.org/pdf/2410.23805">UpANNS</a>:Enhancing Billion-Scale ANNS Efficiency with Real-World PIM Architecture.
+</ul> -->
+
+<h1 id="-news">🔥 Recent Highlights</h1>
+<ul> 
+  <li><em>2025.10</em>: Invited to serve as Program Co-Chair of <strong>ICPP 2026</strong>, welcome to submit!</strong></li>
+  <li><em>2025.08</em>: One paper accepted to <a href="https://arxiv.org/pdf/2410.23805"><strong>SC 2025</strong></a>!</li>
   <li><em>2024.12</em>: We are organizing the <a href="https://cheops-workshop.github.io/2025.html">CHEOPS Workshop</a> at EuroSys 2025. Welcome to submit!
   <li><em>2024.10</em>: Invited to serve as paper track vice-chair for <a href="https://sc25.supercomputing.org/"><strong>SC 2025</strong></a>. Welcome to submit!
   <li><em>2024.03</em>: I am extremely honored to receive the <a href="https://www.computer.org/csdl/journal/td/about/104840?title=Awards&periodical=IEEE%20Transactions%20on%20Parallel%20and%20Distributed%20Systems"><strong>2024 TPDS Award for Editorial Excellence</strong></a>!
@@ -189,37 +192,21 @@
   <li><em>2023.08</em>: Joining Department of Computer Science, HKBU. <a href="recruit-Zhou-HKBU.pdf"><strong><font color="red">We are hiring</font></strong></a>!
   <li><em>2023.08</em>: Invited to serve as paper track chair for <a href="https://www.ipdps.org/"><strong>IPDPS 2024</strong></a>. Welcome to submit!
   <li><em>2023.06</em>: Invited to deliver a talk <em>"Unveiling the Power of Sampling in AI and More"</em> at Meta, Menlo Park, CA, USA. 
-  <!-- <li><em>2023.04</em>: One paper accepted by <a href="https://nschiele.github.io/ICS2023/"><strong>ICS 2023</strong></a>: <em>"DyVer: Dynamic Version Handling for Array Databases"</em>. -->
   <li><em>2023.03</em>: Invited to serve as Birds of a Feather (BoF) chair for<strong> SC 2024</strong>. Welcome to submit!
-</ul>
-
-<h1 id="-research">💻 Research</h1>
-
-<p>Exploiting the rich parallel and distributed architectures to accelerate Big Data/ML/AI applications is the main theme of my research. More specifically, we have been actively working on the following directions:</p>
-<ul>
-  <li> Efficient and privacy-preserving graph computing in large-scale distributed data centers <a href="research.html#graph">[details]</a>
-  <li> Cost-efficient application serving in the Cloud, especially using serverless computing platforms <a href="research.html#cloud">[details]</a>
-  <li> Interference-aware I/O scheduling and processing-in-memory optimizations for AI applications <a href="research.html#storage">[details]</a>
-</ul>
-<p>Some of our algorithms have been implemented in the following system prototypes: 
-  <p>
-  <ul>
-  <li><a href="https://github.com/PGPregel/PGPregel">PGPregel</a>: A differentially private graph engine.
-  <li><a href="https://github.com/DistMinds/SciDB">SciDB+RDMA</a>: A network-optimized distributed array database.
-  <li><a href="https://github.com/DistMinds/FStartBench">FStartBench</a>: A benchmark for evaluating the startup latency of serverless platforms.
 </ul>
 
 <h1 id="-teaching">📖 Teaching</h1>
 <ul>
+	<li>COMP 7160: <a href="https://www.comp.hkbu.edu.hk/v1/file/course/COMP7160.pdf">Research Methods in Computer Science</a> (2025 Fall) <br>
 	<li>COMP 7940: <a href="https://www.comp.hkbu.edu.hk/v1/file/course/COMP7940.pdf">Cloud Computing</a> (2025 Spring) <br>
 	<li>COMP 7095: <a href="https://www.comp.hkbu.edu.hk/v1/file/course/COMP7095.pdf">Big Data Management</a> (2025 Spring) <br>
-	<li>COMP 7160: <a href="www.comp.hkbu.edu.hk/v1/file/course/COMP7160.pdf">Research Methods in Computer Science</a> (2024 Fall) <br>
+	<li>COMP 7160: <a href="https://www.comp.hkbu.edu.hk/v1/file/course/COMP7160.pdf">Research Methods in Computer Science</a> (2024 Fall) <br>
 	<li>COMP 7095: <a href="https://www.comp.hkbu.edu.hk/v1/file/course/COMP7095.pdf">Big Data Management</a> (2024 Spring) <br>
 	<li>COMP 7640: <a href="https://www.comp.hkbu.edu.hk/v1/file/course/COMP7640.pdf">Database Systems and Administration</a> (2024 Spring) <br>
 </ul>
 
 <p> <br>
-  <p> Latest update in June 2025.
+  <p> Latest update in October 2025.
 
 
           </section>
