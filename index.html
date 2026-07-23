@@ -182,7 +182,8 @@
 
 <h1 id="-news" style="margin-top: 40px;">🔥 Recent Highlights</h1>
 <ul> 
-    <li><em>2025.11</em>: I'm attending SC25 at St. Louis. Please stop by our <a href="https://sc25.conference-program.com/presentation/?id=pap166&sess=sess163"><strong>paper session</strong></a> to chat!</li>
+  <li><em>2026.06</em>: We are honored to receive <a href="https://cerg1.ugc.edu.hk/cergprod/scrrm00542.jsp?proj_id=12201026&old_proj_id=null&proj_title=&isname=ZHOU&ioname=CHI&institution=&subject=&pages=1&year=2026&theSubmit=12201026"><strong>2026/27 RGC General Research Fund</strong></a>!</li>
+  <li><em>2025.11</em>: I'm attending SC25 at St. Louis. Please stop by our <a href="https://sc25.conference-program.com/presentation/?id=pap166&sess=sess163"><strong>paper session</strong></a> to chat!</li>
 	<li><em>2025.10</em>: Invited to serve as Program Co-Chair of <a href="https://icpp2026.github.io/"><strong>ICPP 2026</strong></a>, welcome to submit!</li>
   <li><em>2024.12</em>: We are organizing the <a href="https://cheops-workshop.github.io/2025.html">CHEOPS Workshop</a> at EuroSys 2025. Welcome to submit!
   <li><em>2024.10</em>: Invited to serve as paper track vice-chair for <a href="https://sc25.supercomputing.org/"><strong>SC 2025</strong></a>. Welcome to submit!
@@ -197,16 +198,15 @@
 
 <h1 id="-teaching" style="margin-top: 40px;">📖 Teaching</h1>
 <ul>
-	<li>COMP 7160: <a href="https://www.comp.hkbu.edu.hk/v1/file/course/COMP7160.pdf">Research Methods in Computer Science</a> (2025 Fall) <br>
-	<li>COMP 7940: <a href="https://www.comp.hkbu.edu.hk/v1/file/course/COMP7940.pdf">Cloud Computing</a> (2025 Spring) <br>
-	<li>COMP 7095: <a href="https://www.comp.hkbu.edu.hk/v1/file/course/COMP7095.pdf">Big Data Management</a> (2025 Spring) <br>
-	<li>COMP 7160: <a href="https://www.comp.hkbu.edu.hk/v1/file/course/COMP7160.pdf">Research Methods in Computer Science</a> (2024 Fall) <br>
-	<li>COMP 7095: <a href="https://www.comp.hkbu.edu.hk/v1/file/course/COMP7095.pdf">Big Data Management</a> (2024 Spring) <br>
-	<li>COMP 7640: <a href="https://www.comp.hkbu.edu.hk/v1/file/course/COMP7640.pdf">Database Systems and Administration</a> (2024 Spring) <br>
+	<li>COMP 2006: <a href="https://www.comp.hkbu.edu.hk/v1/file/course/COMP2006.pdf">Computer Organization</a><br>
+	<li>COMP 7160: <a href="https://www.comp.hkbu.edu.hk/v1/file/course/COMP7160.pdf">Research Methods in Computer Science</a><br>
+	<li>COMP 7940: <a href="https://www.comp.hkbu.edu.hk/v1/file/course/COMP7940.pdf">Cloud Computing</a><br>
+	<li>COMP 7095: <a href="https://www.comp.hkbu.edu.hk/v1/file/course/COMP7095.pdf">Big Data Management</a><br>
+	<li>COMP 7640: <a href="https://www.comp.hkbu.edu.hk/v1/file/course/COMP7640.pdf">Database Systems and Administration</a><br>
 </ul>
 
 <p> <br>
-  <p> Latest update in October 2025.
+  <p> Latest update in July 2026.
 
 
           </section>
@@ -223,15 +223,13 @@
     var originalContent = $(".page__content").html();
     // Add a click event listener to the "Team" link
     $("#teamLink").on("click", function (e) {
-      // Prevent the default behavior of the link (prevent navigation)
       e.preventDefault();
-      
-      // Load content from team.html and insert it into the page
       $.ajax({
         url: "team.html",
         dataType: "html",
         success: function (data) {
-          $(".page__content").html(data);
+          var doc = new DOMParser().parseFromString(data, "text/html");
+          $(".page__content").empty().append($(doc.body).contents().clone());
         },
         error: function () {
           $(".page__content").html("<p>Error loading team content.</p>");
@@ -240,35 +238,33 @@
     });
 
     $("#publicationsLink").on("click", function (e) {
-      // Prevent the default behavior of the link (prevent navigation)
       e.preventDefault();
-      
-      // Load content from team.html and insert it into the page
       $.ajax({
         url: "publications.html",
         dataType: "html",
         success: function (data) {
-          $(".page__content").html(data);
+          var doc = new DOMParser().parseFromString(data, "text/html");
+          var pub = doc.querySelector(".pub-page");
+          $(".page__content").empty().append(pub ? pub.cloneNode(true) : data);
         },
         error: function () {
-          $(".page__content").html("<p>Error loading team content.</p>");
+          $(".page__content").html("<p>Error loading publications content.</p>");
         }
       });
     });
 
     $("#servicesLink").on("click", function (e) {
-      // Prevent the default behavior of the link (prevent navigation)
       e.preventDefault();
-      
-      // Load content from team.html and insert it into the page
       $.ajax({
         url: "services.html",
         dataType: "html",
         success: function (data) {
-          $(".page__content").html(data);
+          var doc = new DOMParser().parseFromString(data, "text/html");
+          var page = doc.querySelector(".services-page") || doc.body;
+          $(".page__content").empty().append(page.cloneNode(true));
         },
         error: function () {
-          $(".page__content").html("<p>Error loading team content.</p>");
+          $(".page__content").html("<p>Error loading services content.</p>");
         }
       });
     });
