@@ -54,3 +54,18 @@
   color: #1a386a;
   margin-right: 0.15em;
 }
+
+/* Mobile: keep pubs closer to site body size */
+@media (max-width: 48em) {
+  .pub-page .pub-year,
+  .page__content .pub-page .pub-year,
+  .page__content h2.pub-year {
+    font-size: 1.2rem !important;
+  }
+
+  .pub-page .pub-item,
+  .page__content .pub-page .pub-item {
+    font-size: 1rem !important;
+    line-height: 1.45;
+  }
+}
