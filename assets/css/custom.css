@@ -3,11 +3,7 @@
   body { font-size: 1.3rem; }
 }
 
-/* Publications page: compact year-grouped list (Bingzhe-style) */
-.pub-page {
-  max-width: 720px;
-}
-
+/* Publications page: compact year-grouped list */
 .pub-page .pub-note {
   margin: 0.25em 0 0.75em;
   color: #666;
@@ -23,34 +19,33 @@
 .pub-page .pub-year,
 .page__content .pub-page .pub-year,
 .page__content h2.pub-year {
-  margin: 1.5em 0 0.65em !important;
-  padding-bottom: 0.35em !important;
+  margin: 1em 0 0.25em !important;
+  padding-bottom: 0 !important;
   border-bottom: none !important;
-  font-size: 2.25rem !important;
+  font-size: 1.6rem !important;
   font-weight: 700 !important;
-  line-height: 1.2 !important;
+  line-height: 1.25 !important;
   color: #222 !important;
 }
 
-/* Gray divider above each year except the first (2026) */
 .pub-page .pub-year ~ .pub-year,
 .page__content .pub-page .pub-year ~ .pub-year {
-  margin-top: 1.75em !important;
-  padding-top: 0.85em !important;
-  border-top: 1px solid #c8c8c8 !important;
+  margin-top: 1.1em !important;
+  padding-top: 0 !important;
+  border-top: none !important;
 }
 
 .pub-page .pub-list {
-  margin: 0 0 0.5em;
+  margin: 0 0 0.25em;
   padding: 0;
 }
 
 .pub-page .pub-item,
 .page__content .pub-page .pub-item {
-  margin: 0 0 0.85em;
+  margin: 0 0 0.4em;
   padding: 0;
-  font-size: 1rem !important;
-  line-height: 1.45;
+  font-size: 1.3rem !important;
+  line-height: 1.5;
   text-align: justify;
   list-style: none;
 }
@@ -58,8 +53,4 @@
 .pub-page .pub-item strong:first-child {
   color: #1a386a;
   margin-right: 0.15em;
-}
-
-.page__content .pub-page {
-  max-width: 720px;
 }
